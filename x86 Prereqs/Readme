@@ -1,0 +1,11 @@
+Bot Requirements: Install these, put redis-server anywhere you can find and open it
+redis-server.exe (click to run, leave window open)
+Git (make sure you add to path) https://git-scm.com/downloads
+Dotnet Core SDK (2.x) https://www.microsoft.com/net/download/core#/sdk
+
+Music Requirements: Download the Files, install youtube-dl and Microsoft Visual C++ 2010 Redistributable Package. Move the files to NadekoBot/src/NadekoBot. 
+ffmpeg.exe
+libsodium.dll
+opus.dll
+youtube-dl.exe
+ - vcredist_x86.exe (prereq of youtube-dl)
