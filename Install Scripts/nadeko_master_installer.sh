@@ -164,7 +164,7 @@ bash "$root/linuxAIO.sh"
 								if [ $choice -eq 8 ] ; then
 									echo ""
 									echo "Setting up NadekoBot as a service..."
-									wget -N https://github.com/Kwoth/NadekoBot-BashScript/raw/1.9/nadekobotpm2start.sh && bash "$root/nadekobotpm2start.sh"
+									wget -N https://github.com/MaybeGoogle/NadekoFiles/raw/master/Install%20Scripts/NadekoService.sh && bash "$root/NadekoService.sh"
 									echo ""
 									sleep 2s
 									bash "$root/linuxAIO.sh"
