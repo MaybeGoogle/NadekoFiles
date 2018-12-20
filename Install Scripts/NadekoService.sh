@@ -5,6 +5,9 @@ unitcfg="/etc/systemd/system/nadeko.service"
 runfile="NadekoARU_Latest.sh"
 regrunfile="NadekoARN.sh"
 
+clear
+echo "Welcome to the Nadeko service installer."
+
 # Prompt warning if service file exists. Give option to quit.
 if [ -e $unitcfg ]
 then
@@ -31,7 +34,8 @@ while true; do
 done
 
 # Download desired run script file
-wget -N "https://raw.githubusercontent.com/Kwoth/NadekoBot-BashScript/1.9/$runfile"
+echo "Downloading your run script file: $runfile"
+wget -Nq "https://raw.githubusercontent.com/Kwoth/NadekoBot-BashScript/1.9/$runfile"
 
 # Fill out personalized unit config file
 echo "[Unit]
