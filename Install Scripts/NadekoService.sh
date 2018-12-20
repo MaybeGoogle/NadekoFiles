@@ -19,6 +19,7 @@ then
     done
 fi
 
+# Prompt for auto update
 echo -e "Do you want to automatically update the bot?\nPress [Y] for yes or [N] to run normally."
 while true; do
     read -p "[YN]: " yn
@@ -29,8 +30,10 @@ while true; do
     esac
 done
 
-wget "https://raw.githubusercontent.com/Kwoth/NadekoBot-BashScript/1.9/$runfile" -O "$runfile"
+# Download desired run script file
+wget -N "https://raw.githubusercontent.com/Kwoth/NadekoBot-BashScript/1.9/$runfile"
 
+# Fill out personalized unit config file
 echo "[Unit]
 Description=NadekoBot
 
@@ -44,14 +47,17 @@ ExecStop=/bin/sleep 2
 [Install]
 WantedBy=multi-user.target" > $unitcfg
 
+# Re-run generators, enable and start nadeko service
 sudo systemctl daemon-reload
 sudo systemctl enable nadeko
 sudo systemctl start nadeko
 
+# Basic management information
 echo "Finished installing NadekoBot as a service."
 echo "To show information about Nadeko, run 'sudo systemctl status nadeko'."
 echo "To stop/start/restart Nadeko, run 'sudo systemctl [stop/start/restart] nadeko'."
+echo "To completely disable/re-enable Nadeko, run 'sudo systemctl [disable/enable] nadeko'."
 echo "You can view Nadeko's logs with 'sudo tmux a -t Nadeko'. Exit from these logs by pressing ctrl+B and then D."
 
-
+# Return to master installer
 exit
