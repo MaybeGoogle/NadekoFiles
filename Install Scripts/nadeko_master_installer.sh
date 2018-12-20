@@ -13,7 +13,7 @@ choice=10
 	echo "7. Start Nadeko in pm2 (Complete option 6 first!)"
 	echo "8. Start Nadeko as a service (Experimental)"
 	echo "9. Exit"
-	echo -n "Choose [1] to Download, [2 or 3] to Run, [6 and 7] for pm2 setup/startup (see README) or [8] to Exit."
+	echo -n "Choose [1] to Download, [2 or 3] to Run, [6 and 7] for pm2 setup/startup (see README) or [9] to Exit."
 while [ $choice -eq 10 ]; do
 read choice
 if [ $choice -eq 1 ] ; then
@@ -169,7 +169,7 @@ bash "$root/linuxAIO.sh"
 									sleep 2s
 									bash "$root/linuxAIO.sh"
 								else
-									if[ $choice -eq 9 ] ; then
+									if [ $choice -eq 9 ] ; then
 										echo ""
 										echo "Exiting..."
 										cd "$root"
@@ -182,8 +182,9 @@ bash "$root/linuxAIO.sh"
 										echo "4. Auto-Install Prerequisites (For Ubuntu, Debian and CentOS)"
 										echo "6. Auto-Install pm2 (For pm2 information, see README!)"
 										echo "7. Start Nadeko in pm2 (Complete option 6 first!)"
-										echo "8. Exit"
-										echo -n "Choose [1] to Download, [2 or 3] to Run, [6 and 7] for pm2 setup/startup (see README) or [8] to Exit."
+										echo "8. Start Nadeko as a service (Experimental)"
+										echo "9. Exit"
+										echo -n "Choose [1] to Download, [2 or 3] to Run, [6 and 7] for pm2 setup/startup (see README) or [9] to Exit."
 										choice=10
 									fi
 								fi
